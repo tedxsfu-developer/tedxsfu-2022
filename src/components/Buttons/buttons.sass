@@ -1,0 +1,79 @@
+@import "./src/styles/assets"
+
+.button, button
+  color: white
+  font-weight: 600
+  line-height: $default-line-height
+  padding: 0.5rem
+  display: block
+  width: fit-content
+  text-align: center
+  height: fit-content
+
+  img
+    vertical-align: text-top
+    width: $default-font-size * 0.75
+    height: $default-font-size * 0.75
+
+  span.no-show
+    display: none
+
+a.button
+  text-decoration: none
+
+button.transparent, .button.transparent
+  color: white
+  background-color: transparent
+  border: solid 0.1rem white
+  border-radius: 0.25rem
+
+button.transparent:hover, .button.transparent:hover, button.transparent:focus, .button.transparent:focus
+  background-color: white
+  color: black
+  transition: ease-in-out 200ms
+
+  img
+    filter: invert(0%) sepia(4%) saturate(0%) hue-rotate(324deg) brightness(102%) contrast(105%)
+
+button.cta, .button.cta
+  color: white
+  background-color: $ted-red
+  border-radius: 0.25rem
+
+button.cta:hover, .button.cta:hover, button.cta:focus, .button.cta:focus
+  background-color: white
+  color: $ted-red
+  transition: ease-in-out 300ms
+
+button.no-border, .button.no-border
+  border: none
+  background-color: transparent
+  border-radius: 0.25rem
+
+button.disabled, .button.disabled
+  opacity: 50%
+  cursor: not-allowed
+  color: white
+  background-color: transparent
+  border: solid 0.1rem white
+  border-radius: 0.25rem
+
+@media only screen and (min-width: 120rem) and (orientation: landscape)
+  $default-font-size: 1.2rem
+
+  .button, button
+    padding: 1rem
+
+    img
+      width: $default-font-size * 0.75
+      height: $default-font-size * 0.75
+
+@media only screen and (min-width: 80rem) and (orientation: portrait)
+  $default-font-size: 2rem
+
+  .button, button
+    padding: 1.5rem
+
+    img
+      width: $default-font-size * 0.75
+      height: $default-font-size * 0.75

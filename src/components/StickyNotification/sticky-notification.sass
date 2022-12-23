@@ -1,0 +1,32 @@
+@import "./src/styles/assets"
+
+div#notification
+  position: fixed
+  top: 0
+  padding: 1rem
+  transition: 800ms ease-in-out
+  width: 100vw
+  z-index: 50
+
+  p
+    color: white
+    max-width: 100vw
+    text-align: center
+
+  em
+    font-style: normal
+    font-weight: 600
+
+  a
+    color: $ted-red
+
+  a:hover
+    color: white
+
+  a:focus-visible
+    outline: solid $ted-red .1rem
+    outline-offset: .2rem
+
+div#notification.hidden
+  top: -100%
+  transition: 800ms ease-in

@@ -1,0 +1,42 @@
+@import "./src/styles/assets"
+
+main#about
+  section.about-section
+    border-bottom: 0.1rem solid white
+    padding: 2rem 0
+
+    .flex-header
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+
+      button
+        padding: 0
+        vertical-align: top
+
+    h2
+      margin-top: 0
+      margin-bottom: 1rem
+      font-weight: 400
+      font-size: $default-font-size * 1.2
+
+      mark
+        background: none
+        color: white
+        font-style: italic
+
+    p
+      line-height: $default-line-height * 1.2
+
+  section.about-section:first-of-type
+    margin-top: 4rem
+    border-top: 0.1rem solid white
+
+  section.about-section.collapsed
+    h2
+      margin-bottom: 0
+
+    .info-text
+      max-height: 0
+      overflow: hidden

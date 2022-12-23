@@ -1,0 +1,54 @@
+nav#desktop-team-nav, nav#mobile-team-nav
+  a.nav-item
+    color: white
+    text-decoration: none
+    width: max-content
+    white-space: nowrap
+    font-weight: normal
+    opacity: 0.6
+
+  a.nav-item.active
+    font-weight: bolder
+    opacity: 1
+
+@media only screen and (min-width: 20rem)
+  nav#mobile-team-nav
+    display: flex
+    flex-direction: row
+    overflow: scroll
+    position: sticky
+    top: 0
+    padding: 1rem 0
+    background: black
+    opacity: 0.8
+
+    a.nav-item
+      margin-right: 2rem
+      width: max-content
+
+@media only screen and (min-width: 75rem)
+  nav#desktop-team-nav
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    overflow: scroll
+    position: fixed
+    z-index: 10
+
+    height: fit-content
+    margin: 0
+    padding-left: 2rem
+    top: 50%
+    transform: translateY(-50%)
+    left: 0
+    bottom: 0
+    min-height: 15vh
+    width: 16rem
+
+    a.nav-item
+      padding: 0.5rem 0
+      text-align: left
+
+@media only screen and (min-width: 120rem)
+  nav#desktop-team-nav
+    width: 18rem

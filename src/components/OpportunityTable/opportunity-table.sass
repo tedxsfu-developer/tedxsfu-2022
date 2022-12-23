@@ -1,0 +1,192 @@
+@import "./src/styles/assets"
+
+table#opportunity-table, div#opportunity-table
+  .opportunity-description
+    display: flex
+    flex-direction: row
+
+    p
+      vertical-align: baseline
+
+    p:not(.first-item)
+      margin-top: 1rem
+
+  .opportunity-description + button, .opportunity-description + .button
+    margin-top: 2rem
+
+  .opportunity-description.collapsed
+    max-height: 8rem
+    overflow: hidden
+
+  button.toggle.icon-button
+    align-self: start
+    margin: 0
+    padding: 0
+
+    img
+      width: $default-font-size * 0.75
+      height: auto
+
+  section.description-section:first-of-type
+    margin-top: 0
+
+  section.description-section
+    margin-top: 1.5rem
+
+    h2
+      margin-top: 0
+      margin-bottom: 0.5rem
+      text-transform: uppercase
+      font-size: $default-font-size
+      letter-spacing: $default-letter-spacing
+
+    div.block-container.margin-top
+      margin-top: 0.75rem
+
+    h3.inline, p.inline
+      margin: 0
+      display: inline
+
+    p.inline
+      margin-left: 0.5rem
+
+    ul
+      li
+        list-style: none
+        margin-left: 1rem
+        display: flex
+        flex-direction: row
+        align-items: start
+
+        img
+          width: 0.25rem
+          height: auto
+          vertical-align: middle
+          margin-right: 0.5rem
+          padding-top: 0.5rem
+
+        span
+          margin-top: 0
+
+    ol li
+      list-style: none
+
+      span.bold
+        font-weight: 600
+
+  p.contact-info, p.guideline-info
+    strong, em
+      font-style: normal
+      font-weight: 600
+
+    a
+      color: $ted-red
+      text-underline-offset: 0.2rem
+
+    a:hover
+      color: white
+
+    a:focus-visible
+      outline: solid $ted-red .25rem
+      outline-offset: .25rem
+
+table#opportunity-table
+  .description-text
+    max-width: 30rem
+
+@media only screen and (max-width: 20rem)
+  div#opportunity-table
+    section.opportunity-info
+      button, .button
+        margin-top: 1rem
+
+@media only screen and (min-width: 20rem)
+  div#opportunity-table
+    h1
+      margin-bottom: 4rem
+
+    section.opportunity-info
+      border-top: 0.1rem solid white
+      padding: 2rem 0
+
+      h2
+        margin-top: 0
+        font-size: $default-font-size * 1.2
+        font-weight: 600
+
+      h3
+        margin-bottom: 0.5rem
+
+      section.description-section
+        h2, h3
+          font-size: $default-font-size
+
+      .opportunity-details
+        margin: 2.5rem 0
+
+        .flex.space-between
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+
+        button.toggle
+          width: max-content
+
+      button, .button
+        width: 100%
+
+@media only screen and (min-width: 48rem)
+  table#opportunity-table
+    border-collapse: collapse
+
+    tr
+      border-bottom: 0.1rem solid white
+
+    tr#header-row th
+      padding-bottom: 0.5rem
+
+    tr#header-row th.last-column
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+
+      button#toggle-all-expand
+        background: transparent
+        border: none
+        padding: 0
+
+    th, td
+      padding: 1rem 2rem 1rem 0
+      vertical-align: baseline
+
+    th.last-column, td.last-column
+      padding-right: 0
+
+    th
+      text-align: left
+
+    td.opportunity-role
+      font-size: $default-font-size * 1.2
+
+@media only screen and (min-width: 64rem)
+  table#opportunity-table
+    button.toggle.icon-button
+      margin-left: 1rem
+      padding-top: 0.5rem
+
+@media only screen and (min-width: 80rem) and (orientation: portrait)
+  $default-font-size: 2rem
+
+  table#opportunity-table, div#opportunity-table
+    button.toggle.icon-button
+      img
+        width: $default-font-size * 0.75
+
+  div#opportunity-table
+    section.opportunity-info
+      h2
+        font-size: $default-font-size * 1.2
+
+  table#opportunity-table
+    td.opportunity-role
+      font-size: $default-font-size * 1.2

@@ -1,0 +1,73 @@
+div.reverse-order
+  display: flex
+  flex-direction: column
+  flex-flow: column-reverse
+
+  h2
+    font-weight: normal
+
+main#individual-team
+  p.team-intro
+    max-width: 100%
+
+#back-to-meet-the-team
+  display: block
+  text-decoration: none
+  font-weight: normal
+
+  img
+    margin-right: 0.25rem
+
+@media only screen and (max-width: 20rem)
+
+  main#individual-team, #back-to-meet-the-team
+    padding: 0 1rem
+
+@media only screen and (min-width: 20rem)
+  main#individual-team, #back-to-meet-the-team
+    padding: 0 2rem
+
+  #back-to-meet-the-team
+    margin-top: 10rem
+    margin-bottom: 2rem
+
+@media only screen and (min-width: 36rem)
+  main#individual-team, #back-to-meet-the-team
+    padding: 0 4rem
+
+@media only screen and (min-width: 48rem)
+  main#individual-team
+    padding: 0 6rem
+
+  main#individual-team
+    margin-bottom: 8rem
+
+  #back-to-meet-the-team
+    margin: 12rem 0 2rem 2rem
+
+@media only screen and (min-width: 60rem)
+  main#individual-team
+    margin: 2rem auto 8rem
+    width: max-content
+    max-width: 60rem
+
+  #back-to-meet-the-team
+    margin-left: 4rem
+
+@media only screen and (min-width: 72rem)
+  main#individual-team
+    margin-top: 12rem
+
+  #back-to-meet-the-team
+    position: absolute
+    top: 12rem
+    left: 2rem
+    margin: 0
+    padding-left: 2rem
+
+@media only screen and (min-width: 80rem)
+  #back-to-meet-the-team
+    top: 14rem
+    left: 4rem
+    margin: 0
+    padding-left: 2rem

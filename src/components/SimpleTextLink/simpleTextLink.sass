@@ -1,0 +1,18 @@
+@import "./src/styles/assets"
+
+.simple-link, .simple-link:visited, .simple-link:link
+  color: white
+  text-underline-offset: 0.25rem
+
+  img
+    margin-left: 0.25rem
+
+.simple-link:hover
+  color: $ted-red
+
+  img
+    filter: invert(30%) sepia(61%) saturate(3585%) hue-rotate(346deg) brightness(88%) contrast(106%)
+
+.simple-link:focus-visible
+  outline: solid $ted-red .25rem
+  outline-offset: .25rem

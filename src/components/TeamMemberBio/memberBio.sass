@@ -1,0 +1,66 @@
+@import "./src/styles/assets"
+
+section.member-bio
+  margin-top: 6rem
+
+  img
+    max-width: 100%
+    height: auto
+
+  h2
+    font-size: $default-font-size * 1.2
+
+  h2, h3
+    font-weight: normal
+
+
+  .member-info
+    p.intro
+      margin-top: 2rem
+
+  ul
+    margin-top: 1rem
+
+    li
+      list-style: none
+
+    li.fun-fact-item
+      margin-left: 1rem
+      display: flex
+      flex-direction: row
+      align-items: start
+
+      img
+        width: 0.25rem
+        height: auto
+        vertical-align: middle
+        margin-right: 0.5rem
+        padding-top: 0.5rem
+
+  ul.fun-fact-list
+    margin-bottom: 2rem
+
+  ul.social-media-list
+    display: flex
+    flex-direction: row
+
+    li.social-media-item
+      margin-right: 1rem
+
+      img
+        height: $default-font-size * 2
+        width: auto
+
+section.member-bio:first-of-type
+  margin-top: 4rem
+
+@media only screen and (min-width: 48rem)
+  section.member-bio.grid
+    display: grid
+    grid-column-gap: 2rem
+
+  section.member-bio.grid:not(.reverse-order)
+    grid-template-columns: 1fr 2fr
+
+  section.member-bio.grid.reverse-order
+    grid-template-columns: 2fr 1fr

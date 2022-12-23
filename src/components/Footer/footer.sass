@@ -1,0 +1,51 @@
+@import "./src/styles/assets"
+
+footer
+  p#license
+    font-size: $default-font-size * 0.75
+
+@media only screen and (max-width: 20rem)
+  footer
+    padding: 0.5rem 1rem
+    margin-bottom: 6rem
+
+@media only screen and (min-width: 20rem)
+  footer
+    margin: 6rem 2rem 4.5rem 2rem
+    display: flex
+    flex-direction: column
+    padding: 0 0 2rem
+
+    p#license
+      margin-top: 2rem
+
+@media only screen and (min-width: 48rem)
+  footer
+    margin: 0
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 1rem 2rem 3rem 2rem
+    align-items: center
+
+    #social-media
+      margin-right: 10rem
+
+    p#license
+      margin-top: 0
+      align-self: end
+
+
+@media only screen and (min-width: 120rem) and (orientation: landscape)
+  $default-font-size: 1.2rem
+
+  footer
+    p#license
+      font-size: $default-font-size * 0.75
+
+@media only screen and (min-width: 80rem) and (orientation: portrait)
+  $default-font-size: 2rem
+
+  footer
+    p#license
+      font-size: $default-font-size * 0.75

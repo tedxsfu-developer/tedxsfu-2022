@@ -1,0 +1,121 @@
+@import "assets"
+
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  background-color: black
+  color: white
+  font-family: $main-font
+
+  p, a, h1, h2, h3, h4, h5, h6, ol, ul, li
+    font-size: $default-font-size
+    max-width: $paragraph-max-width
+    line-height: $default-line-height
+
+main
+  max-width: $max-content-width
+
+.all-caps
+  text-transform: uppercase
+  font-size: $default-font-size * 0.75
+  letter-spacing: $default-letter-spacing
+  font-weight: 600
+
+.flex-row
+  display: flex
+  flex-direction: row
+
+h1.page-title
+  font-weight: 600
+
+.horizontally-centered
+  margin: 0 auto
+
+img.filter-white
+  filter: invert(100%) sepia(4%) saturate(0%) hue-rotate(350deg) brightness(104%) contrast(101%)
+
+.fade-slide-in
+  transition: transform 600ms, opacity 300ms
+  animation: fade-slide-in 600ms ease-in
+
+.look-through
+  background-color: rgba(0, 0, 0, 0.6)
+
+.display-none
+  display: none
+
+.hidden
+  visibility: hidden
+
+.opaque-text
+  opacity: 0.6
+
+@keyframes fade-slide-in
+  from
+    transform: translateX(-5%)
+    opacity: 0
+
+  to
+    transform: translateY(0%)
+    opacity: 1
+
+@media only screen and (min-width: 20rem)
+  h1.page-title
+    font-size: $default-font-size * 1.5
+    line-height: $default-line-height * 1.5
+
+@media only screen and (min-width: 48rem)
+  h1.page-title
+    font-size: $default-font-size * 2
+    line-height: $default-line-height * 2
+
+@media only screen and (min-width: 120rem) and (orientation: landscape)
+  $default-font-size: 1.2rem
+  $max-content-width: 100rem
+  $paragraph-max-width: 60rem
+  $default-letter-spacing: 0.075rem
+  $default-line-height: 1.5rem * 1.2
+
+  body
+    p, a, h1, h2, h3, h4, h5, h6, ol, ul, li
+      font-size: $default-font-size
+      max-width: $paragraph-max-width
+      line-height: $default-line-height
+
+  h1.page-title
+    font-size: $default-font-size * 2
+    line-height: $default-line-height * 2
+
+  .all-caps
+    font-size: $default-font-size * 0.75
+    letter-spacing: $default-letter-spacing
+
+  main
+    max-width: $max-content-width
+
+@media only screen and (min-width: 80rem) and (orientation: portrait)
+  $default-font-size: 2rem
+  $max-content-width: 100rem
+  $paragraph-max-width: 60rem
+  $default-letter-spacing: 0.075rem
+  $default-line-height: 2.5rem
+
+  body
+    p, a, h1, h2, h3, h4, h5, h6, ol, ul, li
+      font-size: $default-font-size
+      max-width: $paragraph-max-width
+      line-height: $default-line-height
+
+  h1.page-title
+    font-size: $default-font-size * 2
+    line-height: $default-line-height * 2
+
+  .all-caps
+    font-size: $default-font-size * 0.75
+    letter-spacing: $default-letter-spacing
+
+  main
+    max-width: $max-content-width

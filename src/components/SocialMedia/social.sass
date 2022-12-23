@@ -1,0 +1,41 @@
+@import "./src/styles/assets"
+
+#social-media
+  width: max-content
+
+.social-group
+  margin-top: 1rem
+  width: max-content
+
+  a
+    margin-right: 1rem
+
+    img
+      height: $default-font-size * 2
+      width: auto
+
+  a:hover
+    img
+      filter: invert(30%) sepia(61%) saturate(3585%) hue-rotate(346deg) brightness(88%) contrast(106%)
+
+  a:focus-visible
+    outline: solid $ted-red .25rem
+    outline-offset: .25rem
+
+@media only screen and (max-width: 20rem)
+  #social-media
+    margin: 2rem 0
+
+@media only screen and (min-width: 120rem) and (orientation: landscape)
+  $default-font-size: 1.2rem
+
+  .social-group
+    a img
+      height: $default-font-size * 2
+
+@media only screen and (min-width: 80rem) and (orientation: portrait)
+  $default-font-size: 2rem
+
+  .social-group
+    a img
+      height: $default-font-size * 2
